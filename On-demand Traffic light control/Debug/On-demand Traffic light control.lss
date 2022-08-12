@@ -596,7 +596,7 @@ void LEDOFF(DIO *led)
  2fc:	08 95       	ret
 
 000002fe <__vector_1>:
-
+#include <avr/interrupt.h>
 
 
 // Interrupt
