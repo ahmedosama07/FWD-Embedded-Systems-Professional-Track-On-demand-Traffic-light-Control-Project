@@ -17,7 +17,6 @@
 ISR(INT0_vect)
 {
 	pedisterian_mode = 1;
-	ped();
 }
 
 int main(void)

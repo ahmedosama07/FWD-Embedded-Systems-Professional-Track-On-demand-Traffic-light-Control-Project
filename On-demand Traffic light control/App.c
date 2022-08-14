@@ -19,9 +19,6 @@ void ped()
 		int i = 0;
 		
 		
-		yellow_blink();
-		
-		
 		for(i = 0; i < 3; i++)
 		{
 			if(i == 1)
@@ -38,9 +35,6 @@ void ped()
 		yellow_blink();
 		
 		pedisterian_mode = 0;
-		PORTB = 0x00;
-		PORTA = 0x00;
-		main();
 	}
 	
 }
@@ -94,6 +88,10 @@ void App_start()
 			if(i == 1)
 			{
 				yellow_blink();			// Blinking both yellow LEDs
+				if(pedisterian_mode == 1)
+				{
+					ped();
+				}
 				continue;
 			}
 			// Turning green and red LEDs on and off
